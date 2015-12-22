@@ -1,6 +1,6 @@
 {
   "name": "yoastseo",
-  "description": "Yoast clientside page analysis",
+  "description": "Yoast Api page analysis",
   "homepage": "https://github.com/Yoast/",
   "keywords": [
     "Yoast",
@@ -14,37 +14,32 @@
     "url": "https://github.com/Yoast/YoastSEO.js"
   },
   "scripts": {
-    "test": "istanbul test jasmine"
+    "test": "NODE_ENV=test mocha --compilers js:babel/register ./tests/*.test.js"
   },
   "bin": {
     "jasmine": "./bin/jasmine.js",
     "istanbul": "./bin/istanbul.js"
   },
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-concat": "^0.5.1",
-    "grunt-contrib-copy": "^0.8.2",
-    "grunt-contrib-cssmin": "^0.12.3",
-    "grunt-contrib-jshint": "^0.11.2",
-    "grunt-contrib-uglify": "^0.9.1",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-jscs": "^1.6.0",
-    "grunt-jsonlint": "^1.0.4",
-    "grunt-jsvalidate": "^0.2.2",
-    "grunt-po2json": "^0.3.0",
-    "grunt-shell": "^1.1.2",
-    "io.js": "0.0.0",
-    "istanbul": "^0.4.0",
-    "jasmine": "~2.2.1",
-    "jsdom": "^5.4.3",
-    "load-grunt-config": "^0.17.0",
-    "zombie": "^4.0.10"
+    "babel": "^5.8.34",
+    "babel-core": "^5.8.34",
+    "babel-eslint": "^4.1.6",
+    "babel-plugin-typecheck": "^2.0.1",
+    "eslint": "^1.6.0",
+    "eslint-plugin-babel": "^2.1.1",
+    "eslint-config-airbnb": "^0.1.0",
+    "eslint-loader": "^1.1.1",
+    "eslint-plugin-import": "^0.8.1",
+    "eslint-plugin-react": "^3.5.1"
   },
   "bugs": {
     "url": "https://github.com/Yoast/js-text-analysis/issues"
   },
   "dependencies": {
-    "jed": "^1.1.0"
+    "babel-eslint": "^4.1.3",
+    "better-npm-run": "0.0.3",
+    "chai": "^3.2.0",
+    "jed": "^1.1.0",
+    "mocha": "^2.3.2"
   }
 }
